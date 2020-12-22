@@ -1,0 +1,12 @@
+.layout-wrapper .layout-topbar .logo-container img {
+	width: 46px;
+}
+
+.layout-wrapper .layout-content {
+	margin-left: 000px;	
+}
+
+.layout-wrapper .layout-footer {
+	margin-left: 000px;
+	width: calc(100% - 000px); }
+}

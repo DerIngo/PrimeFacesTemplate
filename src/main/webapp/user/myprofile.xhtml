@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui" 
+  template="/WEB-INF/template.xhtml">
+
+  <!-- Nothing to define here by now -->
+  <ui:define name="head">
+  </ui:define>
+
+  <ui:define name="content">
+    <h1 style="text-align: center;">My Profile</h1>
+    <br />
+    <p:inputText value="" placeholder="Watermark here" />
+    <br />
+    <i class="pi pi-check"></i>
+    <i class="pi pi-times"></i>
+    <br />
+    <i class="pi pi-spin pi-spinner" style="font-size: 3em"></i>
+    <br />
+    <h:form>
+      <p:growl id="messages" showDetail="true" />
+      <p:menuButton value="HURZ" />
+      <p:menuButton value="Options">
+        <p:menuitem value="Save" action="#{menuView.save}" update="messages" icon="pi pi-save" />
+        <p:menuitem value="Update" action="#{menuView.update}" update="messages" icon="pi pi-refresh" />
+        <p:menuitem value="Delete" action="#{menuView.delete}" ajax="false" icon="pi pi-times" />
+        <p:separator />
+        <p:menuitem value="Homepage" url="http://www.primefaces.org" icon="pi pi-home" />
+      </p:menuButton>
+    </h:form>
+  </ui:define>
+
+</ui:composition>
