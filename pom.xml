@@ -63,6 +63,7 @@
 			<artifactId>javax.faces</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.omnifaces</groupId>
 			<artifactId>omnifaces</artifactId>
@@ -83,10 +84,37 @@
 			<artifactId>primeflex</artifactId>
 			<version>2.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<version>2.2</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.smallrye/smallrye-rest-client -->
+		<dependency>
+			<groupId>io.smallrye</groupId>
+			<artifactId>smallrye-rest-client</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-		<finalName>PrimefacesTemplate</finalName>
+		<finalName>PrimeFacesTemplate</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -94,8 +122,8 @@
 				<version>3.2.2</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<warName>PrimefacesTemplate</warName>
-					<wtpContextName>PrimefacesTemplate</wtpContextName>
+					<warName>PrimeFacesTemplate</warName>
+					<wtpContextName>PrimeFacesTemplate</wtpContextName>
 				</configuration>
 			</plugin>
 		</plugins>
