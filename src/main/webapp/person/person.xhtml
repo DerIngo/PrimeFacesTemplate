@@ -11,23 +11,26 @@
 
   <ui:define name="content">
     <h1>Persons</h1>
-    <p:dataTable var="person" value="#{personView.persons}" rows="10"
-                  paginator="true"
-                  paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-                  currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
-                  rowsPerPageTemplate="5,10,15">
-      <p:column headerText="Name">
-        <h:outputText value="#{person.firstName} #{person.lastName}" />
-      </p:column>
-      <p:column headerText="Birthday">
-        <h:outputText value="#{person.dayOfBirth}"><f:convertDateTime pattern="dd.MM.yyyy" /> </h:outputText>
-      </p:column>
-      <p:column headerText="Address">
-        <h:outputText value="#{person.streetName} #{person.streetAddressNumber}" /> <br />
-        <h:outputText value="#{person.zipCode} #{person.city}" /> <br />
-        <h:outputText value="#{person.state}" />
-      </p:column>
-    </p:dataTable>
+    <h:form>
+      <p:dataTable var="person" value="#{personView.persons}" widgetVar="personsTable" 
+                    rows="10"
+                    paginator="true"
+                    paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                    currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                    rowsPerPageTemplate="5,10,15">
+        <p:column headerText="Name" filterBy="#{person.firstName} #{person.lastName}" filterMatchMode="contains">
+          <h:outputText value="#{person.firstName} #{person.lastName}" />
+        </p:column>
+        <p:column headerText="Birthday">
+          <h:outputText value="#{person.dayOfBirth}"><f:convertDateTime pattern="dd.MM.yyyy" /></h:outputText>
+        </p:column>
+        <p:column headerText="Address" filterBy="#{person.streetName} #{person.streetAddressNumber} #{person.zipCode} #{person.city} #{person.state}" filterMatchMode="contains">
+          <h:outputText value="#{person.streetName} #{person.streetAddressNumber}" /> <br />
+          <h:outputText value="#{person.zipCode} #{person.city}" /> <br />
+          <h:outputText value="#{person.state}" />
+        </p:column>
+      </p:dataTable>
+    </h:form>
   </ui:define>
 
 </ui:composition>

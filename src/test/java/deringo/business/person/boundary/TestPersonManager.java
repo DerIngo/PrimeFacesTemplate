@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import deringo.business.person.entity.Person;
+
 public class TestPersonManager {
 	private PersonManager manager;
 
@@ -26,5 +28,16 @@ public class TestPersonManager {
 	public void testValuesStayTheSame() {
 		assertEquals(manager.getPersons().get(0).getFirstName(), manager.getPersons().get(0).getFirstName());
 		assertEquals(manager.getPersons().get(0), manager.getPersons().get(0));
+	}
+	
+	@Test
+	public void testPersonNewInstance() {
+		try {
+			@SuppressWarnings("deprecation")
+			Person person = Person.class.newInstance();
+			assert(person != null);
+		} catch (InstantiationException | IllegalAccessException e) {
+			e.printStackTrace();
+		}
 	}
 }

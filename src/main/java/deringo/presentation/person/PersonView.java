@@ -1,15 +1,21 @@
 package deringo.presentation.person;
 
+import java.io.Serializable;
 import java.util.List;
 
+import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
-import javax.enterprise.inject.Model;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
 
 import deringo.business.person.boundary.PersonManager;
 import deringo.business.person.entity.Person;
 
-@Model
-public class PersonView {
+@Named
+@ManagedBean
+@ViewScoped
+public class PersonView implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	private PersonManager personManager;
 	

@@ -14,6 +14,10 @@ public class Person {
 	private String city;
 	private String state;
 
+	public Person() {
+		// default Constructor is required for Person.class.newInstance();
+	}
+	
 	public Person(String firstName, String lastName, Date dayOfBirth, String phoneNumber, String streetName, String streetAddressNumber, String zipCode, String city, String state) {
 		this.firstName = firstName;
 		this.lastName = lastName;
