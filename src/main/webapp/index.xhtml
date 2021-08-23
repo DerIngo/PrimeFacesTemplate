@@ -1,13 +1,22 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
   xmlns:ui="http://java.sun.com/jsf/facelets"
   template="/WEB-INF/template.xhtml">
 
   <ui:define name="head">
-    <title>PrimeFacesTemplate - JSF 2.3 with PrimeFaces 8.0</title>
+    <title>PrimeFacesTemplate - JSF 2.4 with PrimeFaces 10.0</title>
   </ui:define>
 
   <ui:define name="content">
-    <h1 style="text-align: center;">Hello World!</h1>
+    <h1>Hello World!</h1>
+    <br/>
+    <h:outputText value="Stage: #{facesContext.application.projectStage}"/><br/>
+    <br/>
+    <h:outputText value="Press ctrl-shift-1 for debug popup" rendered="#{facesContext.application.projectStage == 'Development'}"/><br/>    
+    <form>
+      <ui:debug hotkey="1" rendered="#{facesContext.application.projectStage == 'Development'}" />
+    </form>
+    <br/>
   </ui:define>
 
 </ui:composition>

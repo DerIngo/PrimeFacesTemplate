@@ -1,12 +1,12 @@
-.layout-wrapper .layout-topbar .logo-container img {
-	width: 46px;
+body { 
+	background-color: black;
+	color: rgba(255, 255, 255, 0.87);
 }
 
-.layout-wrapper .layout-content {
-	margin-left: 000px;	
-}
-
-.layout-wrapper .layout-footer {
-	margin-left: 000px;
-	width: calc(100% - 000px); }
+.footer {
+	position: fixed;
+    bottom: 0px;
+    width:100%;
+    /* remove z-index to put footer under the content */
+    z-index: 102;
 }
