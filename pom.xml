@@ -85,50 +85,50 @@
         </dependency>
         
         <!-- Tomcat -->
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat</artifactId>
-      <version>${tomcat.version}</version>
-      <type>pom</type>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.primefaces.themes</groupId>
-      <artifactId>all-themes</artifactId>
-      <version>1.0.10</version>
-    </dependency>
-    <dependency>
-      <groupId>org.webjars.npm</groupId>
-      <artifactId>primeflex</artifactId>
-      <version>2.0.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.javafaker</groupId>
-      <artifactId>javafaker</artifactId>
-      <version>1.0.2</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.7.2</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest</artifactId>
-      <version>2.2</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.smallrye/smallrye-rest-client -->
-    <dependency>
-      <groupId>io.smallrye</groupId>
-      <artifactId>smallrye-rest-client</artifactId>
-      <version>1.2.2</version>
-    </dependency>
+        <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>tomcat</artifactId>
+          <version>${tomcat.version}</version>
+          <type>pom</type>
+          <scope>provided</scope>
+        </dependency>
+    
+        <dependency>
+          <groupId>org.primefaces.themes</groupId>
+          <artifactId>all-themes</artifactId>
+          <version>1.0.10</version>
+        </dependency>
+        <dependency>
+          <groupId>org.webjars.npm</groupId>
+          <artifactId>primeflex</artifactId>
+          <version>2.0.0</version>
+        </dependency>
+    
+        <dependency>
+          <groupId>com.github.javafaker</groupId>
+          <artifactId>javafaker</artifactId>
+          <version>1.0.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-api</artifactId>
+          <version>5.7.2</version>
+          <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+        <dependency>
+          <groupId>org.hamcrest</groupId>
+          <artifactId>hamcrest</artifactId>
+          <version>2.2</version>
+          <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.smallrye/smallrye-rest-client -->
+        <dependency>
+          <groupId>io.smallrye</groupId>
+          <artifactId>smallrye-rest-client</artifactId>
+          <version>1.2.2</version>
+        </dependency>
     </dependencies>
 
     <repositories>
