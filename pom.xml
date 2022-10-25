@@ -1,25 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>deringo</groupId>
-	<artifactId>primefacestemplate</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>PrimeFacesTemplate</name>
-	<description></description>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>deringo</groupId>
+  <artifactId>primefacestemplate</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>PrimeFacesTemplate</name>
+  <description></description>
 
-	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<owb.version>2.0.27</owb.version>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <owb.version>2.0.27</owb.version>
     <mojarra.version>2.3.14</mojarra.version>
     <primefaces.version>11.0.0</primefaces.version>
     <tomcat.version>9.0.41</tomcat.version>
-	</properties>
+  </properties>
 
     <dependencies>
         <dependency>
@@ -85,50 +85,50 @@
         </dependency>
         
         <!-- Tomcat -->
-    		<dependency>
-    			<groupId>org.apache.tomcat</groupId>
-    			<artifactId>tomcat</artifactId>
-    			<version>${tomcat.version}</version>
-    			<type>pom</type>
-    			<scope>provided</scope>
-    		</dependency>
-    
-    		<dependency>
-    			<groupId>org.primefaces.themes</groupId>
-    			<artifactId>all-themes</artifactId>
-    			<version>1.0.10</version>
-    		</dependency>
-    		<dependency>
-    			<groupId>org.webjars.npm</groupId>
-    			<artifactId>primeflex</artifactId>
-    			<version>2.0.0</version>
-    		</dependency>
-    
-    		<dependency>
-    			<groupId>com.github.javafaker</groupId>
-    			<artifactId>javafaker</artifactId>
-    			<version>1.0.2</version>
-    		</dependency>
-    		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-    		<dependency>
-    			<groupId>org.junit.jupiter</groupId>
-    			<artifactId>junit-jupiter-api</artifactId>
-    			<version>5.7.2</version>
-    			<scope>test</scope>
-    		</dependency>
-    		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
-    		<dependency>
-    			<groupId>org.hamcrest</groupId>
-    			<artifactId>hamcrest</artifactId>
-    			<version>2.2</version>
-    			<scope>test</scope>
-    		</dependency>
-    		<!-- https://mvnrepository.com/artifact/io.smallrye/smallrye-rest-client -->
-    		<dependency>
-    			<groupId>io.smallrye</groupId>
-    			<artifactId>smallrye-rest-client</artifactId>
-    			<version>1.2.2</version>
-    		</dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat</artifactId>
+      <version>${tomcat.version}</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.primefaces.themes</groupId>
+      <artifactId>all-themes</artifactId>
+      <version>1.0.10</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>primeflex</artifactId>
+      <version>2.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.javafaker</groupId>
+      <artifactId>javafaker</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.7.2</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest</artifactId>
+      <version>2.2</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.smallrye/smallrye-rest-client -->
+    <dependency>
+      <groupId>io.smallrye</groupId>
+      <artifactId>smallrye-rest-client</artifactId>
+      <version>1.2.2</version>
+    </dependency>
     </dependencies>
 
     <repositories>
@@ -141,26 +141,26 @@
 
 
 
-	<build>
-		<finalName>PrimeFacesTemplate</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.3.1</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<warName>PrimeFacesTemplate</warName>
-					<wtpContextName>PrimeFacesTemplate</wtpContextName>
-				</configuration>
-			</plugin>
+  <build>
+    <finalName>PrimeFacesTemplate</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <warName>PrimeFacesTemplate</warName>
+          <wtpContextName>PrimeFacesTemplate</wtpContextName>
+        </configuration>
+      </plugin>
 
-			<plugin>
-				<groupId>org.sonarsource.scanner.maven</groupId>
-				<artifactId>sonar-maven-plugin</artifactId>
-				<version>3.9.0.2155</version>
-			</plugin>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.9.0.2155</version>
+      </plugin>
 
-		</plugins>
-	</build>
+    </plugins>
+  </build>
 </project>
