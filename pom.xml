@@ -129,6 +129,14 @@
           <artifactId>smallrye-rest-client</artifactId>
           <version>1.2.2</version>
         </dependency>
+        
+        <!-- for FeedReader -->
+        <!-- https://mvnrepository.com/artifact/com.rometools/rome -->
+        <dependency>
+            <groupId>com.rometools</groupId>
+            <artifactId>rome</artifactId>
+            <version>1.18.0</version>
+        </dependency>
     </dependencies>
 
     <repositories>

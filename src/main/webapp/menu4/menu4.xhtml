@@ -1,5 +1,8 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml" 
-  xmlns:ui="http://java.sun.com/jsf/facelets" 
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui"
   template="/WEB-INF/template.xhtml">
 
   <!-- Nothing to define here by now -->
@@ -7,7 +10,19 @@
   </ui:define>
 
   <ui:define name="content">
-        Menu 4
+    <div class="card">
+      <p:feedReader value="https://www.youtube.com/feeds/videos.xml?channel_id=UCnqnkVSJVpRhOYuf1Vy3eWA" var="feed" size="10">
+          <div class="p-3">
+              <h:outputText value="#{feed.author}" styleClass="font-bold block" /><br/>
+              <h:outputLink value="#{feed.link}" styleClass="ui-link">#{feed.title}</h:outputLink>
+              <p:divider/>
+          </div>
+  
+          <f:facet name="error">
+              <h:outputText value="Error reading RSS Feed!!!" style="color:red;"/>
+          </f:facet>
+      </p:feedReader>
+    </div>
   </ui:define>
 
 </ui:composition>
